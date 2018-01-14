@@ -19,6 +19,15 @@ SCREEN_WIDTH = 300
 # 画面名
 SCREEN_NAME = "Test"
 
+# 画面色:赤
+RGB_R = 0
+
+# 画面色:緑
+RGB_G = 0
+
+# 画面色:青
+RGB_B = 0
+
 
 def resize_screen(length,width):
     """
@@ -40,8 +49,8 @@ def main():
     pygame.display.set_caption(SCREEN_NAME)               # タイトルバーに表示する文字
 
     while (1):
-        screen.fill((0,0,0))        # 画面を黒色(#000000)に塗りつぶし
-        pygame.display.update()     # 画面を更新
+        screen.fill((RGB_R, RGB_G, RGB_B))  # 画面を黒色(#000000)に塗りつぶし
+        pygame.display.update()             # 画面を更新
         # イベント処理
         for event in pygame.event.get():
             if event.type == QUIT:  # 閉じるボタンが押されたら終了
